@@ -19,7 +19,7 @@ class ActivityController extends Controller
      * @param  Request
      * @return [type]
      */
-    public function getAllActivities(Request $request)
+    public function getAllActivities()
     {
         $user_id= Auth::user()->id;
         $activities=Activities::getActiviteiesByUserId( $user_id);
@@ -37,9 +37,12 @@ class ActivityController extends Controller
      */
     public function postAddActivity(Request $request)
     {
-        $data = $request->all();
-        Activities::addActivity($data);//update speicific activity
-        return redirect()->intended('/myActivities/getAll');
+         $data=array(
+            'user_id' => Auth::user()->id,
+            'activity'=>$request
+        );
+        Activities::addActivity($data);//add speicific activity
+         return redirect('myActivity/getAll');
     }
     
     /**
@@ -70,7 +73,7 @@ class ActivityController extends Controller
     public function deleteActivity($id)
     {
         Activities::deleteActivity($id);//delete speicific activity
-        return redirect()->intended('/myActivities/getAll');
+        return redirect('myActivity/getAll');
     }
     /**
      * @param  Request
@@ -83,7 +86,8 @@ class ActivityController extends Controller
         $activity=$activities[0];
     	//Get the details of activity first
        	$data=array(
-			'user_id' => Auth::user()->id,
+            'id' => $id,
+			'user_id' => $user_id,
 			'code' => 1,
 			'location' => $activity->location,
 			'start_time' => $activity->start_time,
@@ -98,11 +102,14 @@ class ActivityController extends Controller
      * @param  Request
      * @return [type]
      */
-    public function postUpdateActivity($request)
-    {
-        $data = $request->all();
-
-        Activities::updateActivity($data->activity);//update speicific activity
-        return redirect()->intended('/myActivities/getAll');
+    public function postUpdateActivity(Request $request)
+    {   
+        $user_id= Auth::user()->id;
+        $data=array(
+            'user_id' => $user_id,
+            'activity'=>$request
+        );
+        Activities::updateActivity($data);//update speicific activity
+        return redirect('myActivity/getAll');
     }
 }

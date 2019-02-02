@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">JETSports</a>
+			<a class="navbar-brand" href="/">JETSports</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,12 +40,15 @@
 						<ul class="dropdown-menu">
 							@if(Auth::check())
 							<li><a href="{{ URL::to('/account/logout') }}">Logout</a></li>
+							<li><a href="{{ URL::to('/myActivity/getAll') }}">My Activity</a></li>
 							@else
 							<li><a href="{{ URL::to('/account/login') }}">Login</a></li>
 							<li><a href="{{ URL::to('/account/register') }}">Register</a></li>
 							@endif
 						</ul>
 					</li>
+
+					<li><a href="{{ URL::to('/map') }}">Map</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div>

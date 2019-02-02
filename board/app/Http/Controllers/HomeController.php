@@ -11,7 +11,31 @@ class HomeController extends Controller
 	{
 
 	}
+	public function getMap()
+	{
+		$activities = Activities::getActiviteiesAll(); 
 
+    	$addressArray = array();
+    	$titleArray = array();
+    	$dateArray = array();
+    	foreach ($activities as $value)
+    	{
+    		array_push($addressArray,$value['location']);
+    		array_push($titleArray,$value['title']);
+    		array_push($dateArray,$value['start_time']);
+    		
+    	}
+		$data = array(
+			'result' => 'This is Alex',
+			'code' => 0,
+			'activities' => $activities,
+			'login' => 1,
+			'addressArray' => $addressArray,
+			'titleArray' => $titleArray,
+			'dateArray' => $dateArray
+		);
+		return View('map', $data);
+	}
 	public function getHome()
 	{
 		

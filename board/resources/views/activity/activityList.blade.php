@@ -13,8 +13,7 @@
 				<thead>
 					<tr>
 						<th>ID</th>
-						<th>User ID</th>
-						<th>Comment</th>
+						<th>Title</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -22,8 +21,7 @@
 					@foreach($activities as $key => $value)
 						<tr>
 							<td>{{ $value->id }}</td>
-							<td>{{ $value->user_id }}</td>
-							<td>{{ $value->comment }}</td>
+							<td>{{ $value->title }}</td>
 							<td>
 								<a href="{{ URL::to('/myActivity/updateActivity') }}/{{ $value->id }}" class="btn btn-sm btn-primary">Update</a>
 								<a href="{{ URL::to('/myActivity/delete') }}/{{ $value->id }}" class="btn btn-sm btn-primary ">Delete</a>

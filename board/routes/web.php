@@ -18,7 +18,7 @@ Route::group(['prefix' => 'account'], function() {
 	Route::get('/register', ['uses' => 'AccountController@getRegister']);
 
 	Route::post('/registerForm', ['uses' => 'AccountController@postRegister']);
-	Route::get('/login', ['uses' => 'AccountController@getLogin']);
+	Route::get('/login', ['as' => 'login','uses' => 'AccountController@getLogin']);
 	Route::post('/verify', ['uses' => 'AccountController@postLogin']);
 });
 
@@ -35,7 +35,7 @@ Route::group(['prefix' => 'myActivity'], function() {
 });
 Route::get('/detail/{id}', ['uses' => 'HomeController@getDetail']);
 Route::get('/home', ['uses' => 'HomeController@getHome']);
-
+Route::get('/map', ['uses' => 'HomeController@getMap']);
 Route::get('/', ['uses' => 'HomeController@getHome']);
 
 // Route::get('/', function () {

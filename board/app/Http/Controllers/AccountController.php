@@ -13,11 +13,15 @@ class AccountController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['getLogin', 'getRegister','postLogin','postRegister']);
+        $this->middleware('auth')->except(['getLogin','getLogout', 'getRegister','postLogin','postRegister']);
     }
 
     public function getLogin()
     {
+        if (Auth::check()) {
+             // if user already login
+             return  redirect()->intended('home');
+         }
     	return View('account.login');
     }
 
@@ -27,12 +31,12 @@ class AccountController extends Controller
      */
     public function postLogin(Request $request)
     {
+
         $data = $request->all();
         $user = User::find($data['email']);
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Success
-            //return redirect()->intended('dashboard');
             return  redirect()->intended('home');
         }
         //Login Failed
@@ -44,13 +48,12 @@ class AccountController extends Controller
      */
     public function getLogout()
     {
-        // if (!Auth::check()) {
-            // if user already login
-            // return recirect()->back();
-        // }
-        Auth::logout();
+         if (Auth::check()) {
+             // if user already login
+             Auth::logout();
+         }
         // return login page
-        return View('home');
+        return redirect()->intended('home');
     }
     /**
      * @return [type]
