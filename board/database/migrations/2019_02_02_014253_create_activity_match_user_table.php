@@ -15,6 +15,8 @@ class CreateActivityMatchUserTable extends Migration
     {
         Schema::create('activity_match_user', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->string('activity_id');
             $table->timestamps();
         });
     }

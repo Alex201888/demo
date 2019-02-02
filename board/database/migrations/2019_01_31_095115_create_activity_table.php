@@ -16,7 +16,12 @@ class CreateActivityTable extends Migration
         Schema::create('activity', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->string('comment');
+            $table->string('location');
+            $table->string('start_time');
+            $table->string('end_time');
+            $table->string('pictures');
+            $table->string('title');
+            $table->string('description');
             $table->timestamps();
         });
     }

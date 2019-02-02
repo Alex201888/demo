@@ -6,7 +6,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-lg-offset-3">
-			<form action="{{ URL::to('/verify') }}" method="POST" role="form">
+			<form action="{{ URL::to('/account/verify') }}" method="POST" role="form">
 				<legend>Account Login</legend>
 				<div class="form-group">
 					<label for="">Email</label>
