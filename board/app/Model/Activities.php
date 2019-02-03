@@ -80,6 +80,9 @@ class Activities extends Model
         $newActivity->end_time =  $activity->end_time;
         $newActivity->title =  $activity->title;
         $newActivity->description =  $activity->description;
+        if($data['pictures']!=null){
+             $newActivity->pictures =  $data['pictures']  ;   
+        }
         $newActivity->save();
     }
 }

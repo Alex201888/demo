@@ -23,7 +23,7 @@ Route::group(['prefix' => 'account'], function() {
 });
 
 Route::group(['prefix' => 'myActivity'], function() {
-
+	Route::post('/uploadFile', ['uses' => 'ActivityController@postUploadFile']);
 	Route::post('/add', ['uses' => 'ActivityController@postAddActivity']);
 	Route::get('/addNewActivity', ['uses' => 'ActivityController@getAddNewActivity']);
 

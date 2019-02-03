@@ -31,7 +31,7 @@ class AccountController extends Controller
      */
     public function postLogin(Request $request)
     {
-
+        session_start();
         $data = $request->all();
         $user = User::find($data['email']);
         $credentials = $request->only('email', 'password');

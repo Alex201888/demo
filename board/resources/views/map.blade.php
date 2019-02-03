@@ -1,8 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
+<div class="container-fluid">
+	<h3> Map </h3>
 <div id="map" style="width: 2000px;height: 1000px;"></div>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1SFOGwCUZWnB89IbEk1iKrsfbxtG9KWs&callback=initMap"
+</div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1SFOGwCUZWnB89IbEk1iKrsfbxtG9KWs&callback=initMap&language=en"
 type="text/javascript"></script>
 <script>
 	

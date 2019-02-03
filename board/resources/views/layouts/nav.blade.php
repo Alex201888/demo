@@ -1,6 +1,6 @@
 
-<nav class="navbar navbar-default" role="navigation">
-	<div class="container">
+<nav class="navbar navbar-default" role="navigation" style="background:linear-gradient(to top right,#63c5bd,#8ecde9,#7c6fb0)">
+	<div class="container" >
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -9,12 +9,15 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">JETSports</a>
+				<a  class="navbar-brand" color="#63c5bd"  href="/">
+					<img style="background-color:#63c5bd" width="130" src="https://jetsport.com.au/assets/frontend/images/logo.png">
+				</a>
+		
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav navbar-left">
+				<ul class="nav navbar-nav navbar-left">
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Melbourne <b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -26,9 +29,15 @@
 				</ul>
 				<form class="navbar-form navbar-left" role="search">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search Activities ">
+						<div class="col-sm-10 col-offset-2">
+						<input type="search" name="search" id="inputSearch" class="form-control" value="" required="required" title="" placeholder="Feature Comming soon" style="height: 50px">
+						</div>
 					</div>
-					<button type="submit" class="btn btn-default">Search</button>
+					<div class="form-group">
+						<div class="col-sm-10 col-offset-2">
+							<button type="submit" class="btn btn-sm btn-default">Search</button>
+						</div>
+					</div>
 				</form>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
