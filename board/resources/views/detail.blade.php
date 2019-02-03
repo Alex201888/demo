@@ -73,6 +73,6 @@
 
 
 </div>	
-<iframe width='100%' height='250' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q={{$activity[0]->location}}&z=16&output=embed&t='></iframe>
+<iframe width='100%' height='250' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q={{$activity[0]->location}}&z=16&language=en&output=embed&t='></iframe>
 
 @stop

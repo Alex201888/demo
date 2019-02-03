@@ -21,7 +21,7 @@ class CreateActivityTable extends Migration
             $table->string('end_time');
             $table->string('pictures');
             $table->string('title');
-            $table->string('description');
+            $table->string('description');//should be text
             $table->timestamps();
         });
     }

@@ -24,7 +24,7 @@
 						</a>
 						</div>
 						<div class="item-info">
-							<p class="time">Monday 4th February - 06:00 PM</p>
+							<p class="time">{{ $value->start_time }}</p>
 							<a href="{{ URL::to('/detail') }}/{{ $value->id }}">
 								<h6 class="activity-title">
 									<span class="activity-title-formatted">{{ $value->title }}</span>
