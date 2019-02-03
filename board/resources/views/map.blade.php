@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
+	
 	<h3> Map </h3>
 <div id="map" style="width: 2000px;height: 1000px;"></div>
 </div>

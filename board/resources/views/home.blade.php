@@ -12,7 +12,7 @@
 		<div class="title-with-line">
 			<h4 class="blue-txt">NEXT ACTIVITIES</h4>
 		</div>
-
+		
 		<div class="activities-block activities-list-page">
 			@foreach($activities as $key => $value)
 			<div class="activities-item col-md-4 col-sm-4">
