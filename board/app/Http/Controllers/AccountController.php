@@ -7,6 +7,7 @@ use View;
 use App\Model\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class AccountController extends Controller
 {
@@ -40,7 +41,8 @@ class AccountController extends Controller
             return  redirect()->intended('home');
         }
         //Login Failed
-        return redirect()->intended('home');
+        Session::flash('message', 'Login Failed!'); 
+        return redirect()->back()->with('alert', 'Login Failed!');
     }
     /**
      * Logout

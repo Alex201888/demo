@@ -5,6 +5,7 @@ Fix Bugs:
 * Update date and time on ADD ACTIVITY page
 * Showing erro on home screen's event list  
 * Change description from string to textarea which may cause inserting problem in SQL
+* Showing Login Failed Message
 * Update the page of Event's Details
   * Map's language
   * Title and Brand image's design
