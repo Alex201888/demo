@@ -12,12 +12,12 @@
 				<h5 class="text-center m-b-30"><strong>Hi there, welcome back!</strong></h5>
 				<div class="form-group">
 					<label for="">Email</label>
-					<input type="email" class="form-control" id="" placeholder="Input field" name="email">
+					<input type="email" class="form-control" id="" placeholder="Enter Your Email" name="email">
 				</div>
 				@csrf
 				<div class="form-group">
 					<label for="">Password</label>
-					<input type="password" class="form-control" id="" placeholder="Input field" name="password">
+					<input type="password" class="form-control" id="" placeholder="Enter Your Password" name="password">
 				</div>
 				<div class="text-center m-t-40">
 					<button type="submit" class="btn btn-large btn-block">Login Now</button>
