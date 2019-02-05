@@ -18,8 +18,8 @@ class Activities extends Model
      */
     public static function getActiviteiesByUserId($id)
     {
-        return Activities::where('user_id', '=', $id)
-            ->get();
+        return Activities::where('user_id', '=', $id)->
+        orderBy('start_time', 'DESC')->get();
     }
     /**
      * [getActiviteiesByUserId description]

@@ -1,9 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container">
-	<table class="table table-striped table-hover">
-		<a href="{{ URL::to('/myActivity/addNewActivity') }}" class="btn btn-sm btn-default ">Add Acivity</a>
+<div lass="table-responsive">
+	<table class="table ">
 		<thead>
 			<tr>
 				<th></th>
@@ -23,9 +22,9 @@
 					<tr>
 						<td>{{ $value->id }}</td>
 						<td>{{ $value->title }}</td>
-						<td class="text-right">
-							<a href="{{ URL::to('/myActivity/updateActivity') }}/{{ $value->id }}" class="btn btn-sm btn-default">Update</a>
-							<a href="{{ URL::to('/myActivity/delete') }}/{{ $value->id }}" class="btn btn-sm btn-default">Delete</a>
+						<td class="text-right">	
+							<a href="{{ URL::to('/myActivity/updateActivity') }}/{{ $value->id }}" >Update</a>
+							<a href="{{ URL::to('/myActivity/delete') }}/{{ $value->id }}" >Delete</a>
 						</td>
 					</tr>
 					@endforeach  
@@ -33,6 +32,9 @@
 			</table>
 		</tbody>
 	</table>
+	<center>
+	<a href="{{ URL::to('/myActivity/addNewActivity') }}" class="btn btn-sm btn-default ">Add Acivity</a>
+	</center>
 </div>
 
 @stop

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete gr__jetsport_com_au">
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete gr__jetsport_com_au" style="height:100%">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -134,4 +134,9 @@
 
 
 </head>
-<body>
+<body style=" display: flex;
+    min-height: 100%;
+    flex-direction: column;"
+    >
+    
+  

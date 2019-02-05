@@ -10,22 +10,18 @@
 				<legend>Account Register</legend>
 				<div class="form-group">
 					<label for="">Email</label>
-					<input type="email" class="form-control" id="" placeholder="Input field" name="email">
+					<input type="email" class="form-control" id="" placeholder="Enter Your Email" name="email">
 				</div>
 				<div class="form-group">
 					<label for="">Name</label>
-					<input type="string" class="form-control" id="" placeholder="Input field" name="name">
+					<input type="string" class="form-control" id="" placeholder="Enter Your Name" name="name">
 				</div>
 				@csrf
 				<div class="form-group">
 					<label for="">Password</label>
-					<input type="password" class="form-control" id="" placeholder="Input field" name="password">
+					<input type="password" class="form-control" id="" placeholder="Enter Your Password" name="password">
 				</div>
-				<div class="form-group">
-					<label for="">Enter Password Again</label>
-					<input type="password" class="form-control" id="" placeholder="Input field" name="repassword">
-				</div>
-				<button type="submit" class="btn btn-primary btn-block">Register Now</button>
+				<button type="submit" class="btn btn-default btn-block">Register Now</button>
 			</form>
 		</div>
 	</div>
